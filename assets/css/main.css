@@ -2536,7 +2536,7 @@ body.homepage.is-preload #header:after {
 /* Banner */
 
 #banner {
-	background: #fff;
+	background: #f1f1fb40;
 	text-align: center;
 	padding: 4.5em 0 4.5em 0;
 	margin-bottom: 0;
@@ -2544,6 +2544,21 @@ body.homepage.is-preload #header:after {
 
 #banner header>p {
 	margin-bottom: 0;
+}
+
+#banner h2 a {
+	border: 2px solid #8f49bd;
+	background: #f1f1fb40;
+	color: #8f49bd;
+	padding: 14px 28px;
+	font-size: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#banner h2 a:hover {
+	background-color: #8f49bd;
+	color: rgb(255, 255, 255);
 }
 
 /* Content */
