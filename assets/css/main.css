@@ -173,8 +173,8 @@ html {
 }
 
 body {
-	background: #f0f4f4;
-	color: #5b5b5b;
+	background: #c1c1e740;
+	color: #000000;
 	font-size: 15pt;
 	line-height: 1.85em;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -269,7 +269,7 @@ a {
 }
 
 a:hover {
-	color: #ef8376;
+	color: #c26ef0;
 	border-bottom-color: transparent;
 }
 
@@ -2059,7 +2059,7 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-	color: #ef8376;
+	color: #c26ef0;
 }
 
 /* Form */
@@ -2096,7 +2096,7 @@ form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
 	background: #fff;
-	border-color: #df7366;
+	border-color: #c26ef0;
 }
 
 form input[type="text"],
@@ -2179,7 +2179,7 @@ button,
 .button {
 	position: relative;
 	display: inline-block;
-	background: #df7366;
+	background: #7643a6;
 	color: #fff;
 	text-align: center;
 	border-radius: 0.5em;
@@ -2201,7 +2201,7 @@ input[type="reset"]:hover,
 button:hover,
 .button:hover {
 	color: #fff;
-	background: #ef8376;
+	background: #8f49bd;
 }
 
 input[type="button"].alt,
@@ -2346,10 +2346,10 @@ header .icon.circled {
 
 #header .button {
 	display: inline-block;
-	border-radius: 100%;
-	width: 4.5em;
-	height: 4.5em;
-	line-height: 4.5em;
+	border-radius: 10px;
+	width: 7em;
+	height: 3em;
+	line-height: 3.1em;
 	text-align: center;
 	font-size: 1.25em;
 	padding: 0;
@@ -2685,7 +2685,7 @@ body.homepage.is-preload #header:after {
 
 .carousel .forward:hover:before,
 .carousel .backward:hover:before {
-	background-color: rgba(239, 131, 118, 0.75);
+	background-color: rgba(101, 51, 209, 0.887);
 }
 
 .carousel .forward {
@@ -2719,23 +2719,44 @@ body.homepage.is-preload #header:after {
 .carousel .reel {
 	white-space: nowrap;
 	position: relative;
+	overflow-x: auto;
+	/* Allow horizontal scrolling */
 	-webkit-overflow-scrolling: touch;
-	padding: 0 2em 0 2em;
+	/* Enable smooth scrolling on iOS */
 }
 
 .carousel article {
 	display: inline-block;
-	width: 18em;
-	background: #ffffff;
+	width: calc(100% - 4em);
+	/* Adjust width to take up almost full width */
+	max-width: 30em;
+	/* Set a maximum width for larger screens */
+	background: #fff;
 	text-align: center;
-	padding: 0 1em 3em 1em;
-	margin: 0 2em 0 0;
+	padding: 1em;
+	margin-right: 0;
+	/* Ensure no margin between items */
 	white-space: normal;
 	opacity: 1.0;
-	-moz-transition: opacity 0.75s ease-in-out;
-	-webkit-transition: opacity 0.75s ease-in-out;
-	-ms-transition: opacity 0.75s ease-in-out;
-	transition: opacity 0.75s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	border: 5px solid #ffffff;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+.carousel article:hover {
+	opacity: 0.7;
+}
+
+.carousel article .text {
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.carousel article:hover .text {
+	opacity: 1;
+	/* Show the text on hover */
+	transition: opacity .5s ease-in-out;
 }
 
 .carousel article.loading {
@@ -2743,12 +2764,15 @@ body.homepage.is-preload #header:after {
 }
 
 .carousel article .image {
-	position: relative;
-	left: -1em;
-	top: 0;
-	width: auto;
-	margin-right: -2em;
-	margin-bottom: 3em;
+	width: 100%;
+	/* Ensure image fills its container */
+	height: auto;
+	/* Maintain aspect ratio */
+	margin-bottom: 1em;
+	/* Adjust margin as needed */
+	/* border: 5px solid #d4d1d1b4;
+	box-sizing: border-box; */
+	border-radius: 10px;
 }
 
 .carousel article p {
